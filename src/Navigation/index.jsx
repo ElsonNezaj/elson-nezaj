@@ -29,7 +29,9 @@ export default function Navigation() {
         {NAVIGATION_OBJECT.map((nav) => (
           <div
             onClick={() => handleItemClick(nav.value)}
-            className={styles.navigationItem}
+            className={`${styles.navigationItem} ${
+              selectedNavigation === nav.value && styles.selectedItem
+            }`}
           >
             <span className={styles.selectedDot}>
               {selectedNavigation === nav.value && ">"}

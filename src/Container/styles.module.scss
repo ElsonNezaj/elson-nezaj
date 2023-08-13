@@ -12,3 +12,11 @@
   max-width: 250px !important;
   min-width: 250px !important;
 }
+
+.backDrop {
+  position: absolute;
+  width: 87%;
+  height: 100vh;
+  background-color: rgba(219, 219, 219, 0.831);
+  z-index: 1;
+}
