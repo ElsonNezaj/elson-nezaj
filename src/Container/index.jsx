@@ -5,6 +5,7 @@ import { Content } from "antd/es/layout/layout";
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { triggerSideBar } from "../redux/navigation/navigationSlice";
+import ContentContainer from "../Content/Container";
 
 export default function Container() {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ export default function Container() {
           className={styles.mainContent}
         >
           {sideBarState === false && <div className={styles.backDrop} />}
-          Main Content
+          <ContentContainer />
         </Content>
       </Layout>
     </div>
