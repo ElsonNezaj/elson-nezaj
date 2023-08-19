@@ -1,6 +1,5 @@
 import { Drawer, Layout } from "antd";
 import styles from "./styles.module.scss";
-import Sider from "antd/es/layout/Sider";
 import { Content } from "antd/es/layout/layout";
 import Navigation from "../Navigation";
 import { useDispatch, useSelector } from "react-redux";
