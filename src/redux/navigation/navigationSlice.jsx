@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   selectedNavigation: "main",
-  sideBarState: true,
+  sideBarState: false,
 };
 
 export const navigationSlice = createSlice({

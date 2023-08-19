@@ -1,4 +1,4 @@
-import { Layout } from "antd";
+import { Drawer, Layout } from "antd";
 import styles from "./styles.module.scss";
 import Sider from "antd/es/layout/Sider";
 import { Content } from "antd/es/layout/layout";
@@ -13,14 +13,16 @@ export default function Container() {
   return (
     <div className={styles.container}>
       <Layout className={styles.layout}>
-        <Sider hidden={sideBarState} className={styles.sideBar}>
-          <Navigation />
-        </Sider>
-        <Content
-          onClick={() => dispatch(triggerSideBar(true))}
-          className={styles.mainContent}
+        <Drawer
+          placement="left"
+          open={sideBarState}
+          onClose={() => dispatch(triggerSideBar(false))}
+          className={styles.sideBar}
         >
-          {sideBarState === false && <div className={styles.backDrop} />}
+          <Navigation />
+        </Drawer>
+        <Content className={styles.mainContent}>
+          {/* {sideBarState === false && <div className={styles.backDrop} />} */}
           <ContentContainer />
         </Content>
       </Layout>
